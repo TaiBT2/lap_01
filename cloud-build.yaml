@@ -1,4 +1,8 @@
 steps:
-  - name: 'gcr.io/cloud-builders/docker'
-    entrypoint: 'echo'
-    args: ['Hello, World!']
+  - name: 'ubuntu'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        echo "Hello from the Cloud Build pipeline"
+        echo "This is a demo echo script"

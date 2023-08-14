@@ -1,8 +1,7 @@
 steps:
-  - name: 'ubuntu'
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - |
-        echo "Hello from the Cloud Build pipeline"
-        echo "This is a demo echo script"
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'taibt2docker/reactappdemo:$COMMIT_SHA', '.']
+    dir: './'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'taibt2docker/reactappdemo:$COMMIT_SHA']

@@ -1,0 +1,8 @@
+steps:
+- name: first
+  id: A
+- name: second
+  id: B
+  waitFor: ['-'] # happen immediatly build start
+- name: third
+  waitFor: B # happen after B

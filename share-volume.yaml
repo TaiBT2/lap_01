@@ -1,0 +1,9 @@
+steps:
+- name: first
+  volumes:
+  - name: 'myvolume'
+    path: '/persistentvolume'
+- name: second
+  volumes:
+  - name: 'myvolume'
+    path: '/persistentvolume'

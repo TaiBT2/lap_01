@@ -41,3 +41,5 @@ artifacts:
     location: 'gs://asecurityguru'
     paths:
       - zap_report.html
+options:
+  logging: NONE 
